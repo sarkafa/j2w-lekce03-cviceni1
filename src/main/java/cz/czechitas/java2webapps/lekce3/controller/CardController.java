@@ -19,7 +19,7 @@ public class CardController {
         person.setGivenName("Eliška");
         person.setSurname("Bramborová");
         person.setPhotosURL("https://thispersondoesnotexist.com/");
-        person.setBirthDate(LocalDate.of(1995, 5, 15));
+        person.setBirthDate(LocalDate.of(1900, 5, 15));
 
         Adress adress = new Adress();
         adress.setCity("Praha");

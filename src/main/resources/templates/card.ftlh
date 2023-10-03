@@ -27,10 +27,17 @@
             <span class="label">Datum narození</span>
             <span class="value">${person.birthDate.format('LONG_DATE')}</span>
         </div>
-        <div class="row">
-            <span class="label">Věk</span>
-            <span class="value">${person.age}</span>
-        </div>
+        [#if person.age < 30]
+            <div class="row">
+                <span class="label">Věk</span>
+                <span class="value">${person.age}</span>
+            </div>
+        [#elseif person.age > 60]
+            <div class="row">
+                <span class="label">Věk</span>
+                <span class="value">60+</span>
+            </div>
+        [/#if]
     </div>
     <div class="address">
         <div class="address-line">${adress.street} ${adress.psc}</div>
